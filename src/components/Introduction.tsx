@@ -13,7 +13,7 @@ const Introduction: FC = () => {
 
   return (
     <Box sx={{background: '#1E1E1E', display: 'flex', alignItems: 'center', height: {xs: '100%', md: '100vh'}}}>
-     <Box p={{xs: 3, md: 6}}>
+     <Box px={{xs: 3, md: 6}}>
 
       <Typography
         color="#CECDCE" fontFamily={'Space Grotesk'} fontWeight={400} fontSize={54}
