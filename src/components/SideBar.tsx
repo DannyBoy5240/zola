@@ -2,10 +2,10 @@ import { FC } from 'react';
 
 import { Box, Typography, ListItemButton, ListItemText } from '@mui/material';
 
-import AddCommentIcon from '@mui/icons-material/AddComment';
-import DeleteIcon from '@mui/icons-material/Delete';
-import MailIcon from '@mui/icons-material/Mail';
-import LogoutIcon from '@mui/icons-material/Logout';
+import newChatIcon from './../assets/icons/newchat.svg'
+import clearChatIcon from './../assets/icons/clearchat.svg'
+import contactUsIcon from './../assets/icons/contactus.svg'
+import logOutIcon from './../assets/icons/logout.svg'
 
 const SideBar: FC = () => {
 
@@ -22,20 +22,21 @@ const SideBar: FC = () => {
           display: 'flex', flexDirection: {sx: 'row', md: 'column'}
         }}>
         <Box pb={2}>
-          <Typography color="white" fontWeight={400} fontSize={40}>
+          <Typography
+            color="#CECDCE" fontFamily='Space Grotesk' fontWeight={400} fontSize={40}>
             Zola.
           </Typography>
         </Box>
 
         <Box>
           <ListItemButton component="a" href="/">
-            <AddCommentIcon sx={{color: 'white', fontSize: '16px'}}/>
-            <ListItemText primary="New Chat" sx={{fontSize: '16px', color: 'white', paddingLeft: '10px'}} />
+            <img src={newChatIcon} width='15px' height='15px' />
+            <ListItemText primary="New Chat" sx={{fontFamily: 'Space Grotesk', fontSize: '16px', color: 'white', paddingLeft: '10px'}} />
           </ListItemButton>
 
           <ListItemButton component="a" href="/">
-            <DeleteIcon sx={{color: 'white', fontSize: '16px'}}/>
-            <ListItemText primary="Clear Chat" sx={{fontSize: '16px', color: 'white', paddingLeft: '10px'}} />
+            <img src={clearChatIcon} width='15px' height='15px' />
+            <ListItemText primary="Clear Chat" sx={{fontFamily: 'Space Grotesk', fontSize: '16px', color: 'white', paddingLeft: '10px'}} />
           </ListItemButton>
         </Box>
 
@@ -43,13 +44,13 @@ const SideBar: FC = () => {
 
         <Box>
           <ListItemButton component="a" href="/">
-            <MailIcon sx={{color: 'white', fontSize: '16px'}}/>
-            <ListItemText primary="Contact Us" sx={{fontSize: '16px', color: 'white', paddingLeft: '10px'}} />
+            <img src={contactUsIcon} width='15px' height='15px' />
+            <ListItemText primary="Contact Us" sx={{fontFamily: 'Space Grotesk', fontSize: '16px', color: 'white', paddingLeft: '10px'}} />
           </ListItemButton>
 
           <ListItemButton component="a" href="/">
-            <LogoutIcon sx={{color: 'white', fontSize: '16px'}}/>
-            <ListItemText primary="Log Out" sx={{fontSize: '16px', color: 'white', paddingLeft: '10px'}} />
+            <img src={logOutIcon} width='15px' height='15px' />
+            <ListItemText primary="Log Out" sx={{fontFamily: 'Space Grotesk', fontSize: '16px', color: 'white', paddingLeft: '10px'}} />
           </ListItemButton>
         </Box>
 

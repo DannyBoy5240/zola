@@ -9,6 +9,7 @@ const TextAreaStyle = styled("textarea")(({ theme }) => ({
   border: '1px solid #CECDCE',
   width: "100%",
   height: '180px',
+  weight: 700,
   padding: '20px',
   flexGrow: 1,
   boxSizing: "border-box",
@@ -18,7 +19,9 @@ const TextAreaStyle = styled("textarea")(({ theme }) => ({
   resize: 'none',
   "&::placeholder": {
     opacity: 1,
-    color: 'white'
+    color: 'white',
+    fontFamily: 'Space Grotesk',
+    fontSize: '16px'
   },
 }));
 
@@ -30,7 +33,7 @@ const ChatBox: FC = () => {
             sx={{position: 'absolute', width: '180px', height: '60px', bottom: '10px', right: '10px', background: 'white', border: '1px solid #CECDCE', borderRadius: '4'}}
             style={{textTransform: 'none'}}
           >
-          <Typography color="black" fontWeight={700} fontSize={16}>
+          <Typography color="black" fontFamily='SF Compact' fontWeight={700} fontSize={16}>
             Ask Clara ⌘ Enter
           </Typography>
       </Button>

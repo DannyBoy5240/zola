@@ -10,7 +10,7 @@ const ChatBoard: FC = () => {
   return (
     <Box sx={{background: '#27292D', alignItems: 'center'}} height="100vh" width="100vw">
       <Box>
-        <Box sx={{display: 'flex'}} justifyContent='right' m={{xs: 5, md: 2}}>
+        <Box sx={{display: 'flex'}} justifyContent='right' mt={{xs: 8, md: 5}} mr={{xs: 6, md: 5}}>
           <SearchBox />
         </Box>
 
@@ -26,6 +26,7 @@ const ChatBoard: FC = () => {
         <Box
           sx={{width: {xs: '90%', md: '60%'}}}
           px={{xs: 2, md: 10}}
+          pt={1}
         >
           <ChatBox />
         </Box>
