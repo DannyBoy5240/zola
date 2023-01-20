@@ -6,7 +6,7 @@ import ChatBoard from 'components/ChatBoard';
 
 const MainFeedPage: FC = () => {
   return (
-    <Box sx={{display: 'flex'}}>
+    <Box sx={{display: 'flex', flexDirection: {xs:'column', md:'row'}}}>
       <SideBar />
       <ChatBoard />
     </Box>

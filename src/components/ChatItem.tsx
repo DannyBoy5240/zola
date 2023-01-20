@@ -12,7 +12,17 @@ type ChatItemProps = {
 
 const ChatItem: FC<ChatItemProps> = ({user='', time='', content=''}) => {
   return (
-    <Box sx={{display: 'flex'}} px={2} py={3}>
+    <Box
+      sx={{
+        display: 'flex',
+        "&:hover": {
+          borderLeft: "1px solid #CECDCE",
+          color: 'gray',
+          backgroundColor: '#474B52'
+        },
+      }}
+      px={2} py={1}
+    >
       <Avatar
         alt="Alex"
         sx={{width: 64, height: 64}}

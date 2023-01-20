@@ -33,18 +33,15 @@ const SignUp: FC = () => {
           </Typography>
         </Button>
 
-        <Typography color="white" fontWeight={400} fontSize={24} pt={6} pb={3}>
+        <Typography color="white" fontWeight={400} fontSize={24} pt={4} pb={2}>
           <ListItem sx={{ display: 'list-item' }}>
             OR
           </ListItem>
         </Typography>
 
-        <Typography color="white" fontWeight={400} fontSize={16} py={2}>
+        <Typography color="white" fontWeight={400} fontSize={16} py={1}>
           Email
         </Typography>
-        <TextField label="Your email" variant="outlined"
-          style={{color: 'white'}}
-        />
         <Button
           sx={{width: '380px', height: '60px', background: '#1E1E1E', color: '#CECDCE', fontWeight: '700'}}
           style={{textTransform: 'none'}}
@@ -52,7 +49,7 @@ const SignUp: FC = () => {
           Your email
         </Button>
 
-        <Typography color="white" fontWeight={400} fontSize={16} py={2}>
+        <Typography color="white" fontWeight={400} fontSize={16} py={1}>
           Password
         </Typography>
         <Button
@@ -62,15 +59,17 @@ const SignUp: FC = () => {
           Enter Password
         </Button>
 
-        <Button
-          sx={{width: '380px', height: '60px', background: '#EAEAEA', color: 'black', fontWeight: '700', borderRadius: '4px'}}
-          style={{textTransform: 'none'}}
-          onClick={getStarted}
-        >
-           <Typography color="black" fontWeight={700} fontSize={20}>
-             Get Started
-           </Typography>
-        </Button>
+        <Box mt={2}>
+          <Button
+            sx={{width: '380px', height: '60px', background: '#EAEAEA', color: 'black', fontWeight: '700', borderRadius: '4px'}}
+            style={{textTransform: 'none'}}
+            onClick={getStarted}
+          >
+            <Typography color="black" fontWeight={700} fontSize={20}>
+              Get Started
+            </Typography>
+          </Button>
+        </Box>
 
       </Box>
     </Box>

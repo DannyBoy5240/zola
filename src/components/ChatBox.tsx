@@ -24,10 +24,10 @@ const TextAreaStyle = styled("textarea")(({ theme }) => ({
 
 const ChatBox: FC = () => {
   return (
-    <Box>
+    <Box sx={{position: 'relative'}}>
       <TextAreaStyle placeholder='Start Typing...' />
       <Button
-            sx={{position: 'relative', width: '180px', height: '60px', bottom: '75px', left: '78%', background: 'white', border: '1px solid #CECDCE', borderRadius: '4'}}
+            sx={{position: 'absolute', width: '180px', height: '60px', bottom: '10px', right: '10px', background: 'white', border: '1px solid #CECDCE', borderRadius: '4'}}
             style={{textTransform: 'none'}}
           >
           <Typography color="black" fontWeight={700} fontSize={16}>

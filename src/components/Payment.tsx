@@ -1,11 +1,15 @@
 import { FC } from 'react';
 
-import { Box, Typography, Button } from '@mui/material';
+import { Box, Typography, Button, useMediaQuery } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 import { useNavigate } from 'react-router-dom';
 
 const Payment: FC = () => {
 
   const navigate = useNavigate()
+
+  const theme = useTheme();
+  const isMobile = !useMediaQuery(theme.breakpoints.up('md'));
 
   const gotoSetup = () => {
     navigate('/setup')
@@ -22,7 +26,7 @@ const Payment: FC = () => {
         Operating Zola is expensive, and we need your support to keep it running.
       </Typography>
 
-      <Box sx={{display: 'flex', flexDirection: 'row'}}>
+      <Box sx={{display: 'flex', flexDirection: isMobile?'column':'row'}}>
         <Button
           sx={{width: '260px', height: '60px', background: '#EAEAEA', color: 'black', fontWeight: '700'}}
           style={{textTransform: 'none'}}

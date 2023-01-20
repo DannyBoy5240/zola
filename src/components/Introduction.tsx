@@ -1,19 +1,23 @@
 import { FC } from 'react';
 
-import { Box, Typography, Button } from '@mui/material';
+import { Box, Typography, Button, useMediaQuery } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 import { useNavigate } from 'react-router-dom';
 
 const Introduction: FC = () => {
 
   const navigate = useNavigate()
 
+  const theme = useTheme();
+  const isMobile = !useMediaQuery(theme.breakpoints.up('md'));
+
   const earlyAccess = () => {
     navigate('/signup')
   }
 
   return (
-    <Box sx={{background: '#1E1E1E', display: 'flex', alignItems: 'center'}} height="100vh">
-     <Box p={8}>
+    <Box sx={{background: '#1E1E1E', display: 'flex', alignItems: 'center', height: {xs: '100%', md: '100vh'}}}>
+     <Box px={isMobile?3:6}>
       <Typography color="white" fontWeight={400} fontSize={54} py={2}>
         Meet Zola. A new tool for self-discovery.
       </Typography>
