@@ -1,0 +1,41 @@
+import { FC } from 'react';
+
+import Textarea from '@mui/joy/Textarea';
+import { Box, Button, Typography } from '@mui/material';
+
+import { styled } from "@mui/material/styles";
+
+const TextAreaStyle = styled("textarea")(({ theme }) => ({
+  border: '1px solid #CECDCE',
+  width: "100%",
+  height: '180px',
+  padding: '20px',
+  flexGrow: 1,
+  boxSizing: "border-box",
+  borderRadius: 4,
+  backgroundColor: "#27292D",
+  fontSize: '16px',
+  resize: 'none',
+  "&::placeholder": {
+    opacity: 1,
+    color: 'white'
+  },
+}));
+
+const ChatBox: FC = () => {
+  return (
+    <Box>
+      <TextAreaStyle placeholder='Start Typing...' />
+      <Button
+            sx={{position: 'relative', width: '180px', height: '60px', bottom: '75px', left: '78%', background: 'white', border: '1px solid #CECDCE', borderRadius: '4'}}
+            style={{textTransform: 'none'}}
+          >
+          <Typography color="black" fontWeight={700} fontSize={16}>
+            Ask Clara ⌘ Enter
+          </Typography>
+      </Button>
+    </Box>
+  )
+}
+
+export default ChatBox
