@@ -1,8 +1,12 @@
 import Router from 'routes';
 
+import { Container } from '@mui/material';
+
 function App() {
   return (
-    <Router />
+    // <Container maxWidth='1440px'>
+      <Router />
+    // </Container>
   );
 }
 

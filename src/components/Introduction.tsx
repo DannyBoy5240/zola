@@ -17,13 +17,13 @@ const Introduction: FC = () => {
 
       <Typography
         color="#CECDCE" fontFamily={'Space Grotesk'} fontWeight={400} fontSize={54}
-        lineHeight='72px' px={2}>
+        lineHeight='72px' py={2}>
         Meet Zola. A new tool for self-discovery.
       </Typography>
 
       <Typography
         color="#CECDCE" fontFamily={'Space Grotesk'} fontWeight={400} fontSize={24}
-        lineHeight='36px' p={2}>
+        lineHeight='36px' py={2}>
         Our AI understands and guides you through a journey of exploration to uncover your innermost beliefs and unlock your true potential.
       </Typography>
 
